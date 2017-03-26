@@ -1,5 +1,9 @@
 package aps_1;
 
+import java.io.File;
+
+import aps_1.Arquivo;
+
 public class Teste {
 
 	public static void main(String[] args) {
@@ -16,6 +20,17 @@ public class Teste {
 		 * 
 		 * */
 		
+		//Lendo o primeiro arquivo txt
+		String arq = "src/txt/example_1.txt";
+		
+		
+		String texto = Arquivo.Read(arq);
+		if(texto.isEmpty()){
+			System.out.println(arq);
+			System.out.println("Arquivo vazio!");
+		}else{
+			System.out.println(texto);
+		}
 	}
 
 }

@@ -55,10 +55,36 @@ public class Teste {
 			}
 		}
 		
-		//
+		//Matriz com zeros.
+		
+		Integer matrizzeros[][] = new Integer[coluna][linha];
+		for(int lin = 0; lin < linha ; lin++){
+			for(int col = 0; col < coluna ; col++){
+				if(matriz[col][lin]==1){
+					matrizzeros[col][lin] = 0;
+				}else{
+				matrizzeros[col][lin] = matriz[col][lin];
+				}
+			}
+		}
+		
+		//Matriz com 'um'.
+		
+		Integer matrizum[][] = new Integer[coluna][linha];
+		for(int lin = 0; lin < linha ; lin++){
+			for(int col = 0; col < coluna ; col++){
+				if(matriz[col][lin]==0){
+					matrizum[col][lin] = 1;
+				}else{
+					matrizum[col][lin] = matriz[col][lin];
+				}
+			}
+		}
+		
 		
 		
 		//exibindo o array
+		System.out.println("Matriz Principal:\n");
 		for(int lin = 0; lin < linha ; lin++){
 			System.out.print("|");
 			for(int col = 0; col < coluna ; col++){
@@ -67,6 +93,32 @@ public class Teste {
 			}
 			System.out.println();
 		}
+		System.out.println("- - - - - - - - -\n");
+		
+		
+		//exibindo o array
+		System.out.println("Matriz com zeros:\n");
+		for(int lin = 0; lin < linha ; lin++){
+			System.out.print("|");
+			for(int col = 0; col < coluna ; col++){
+				System.out.print(matrizzeros[col][lin].intValue());
+				System.out.print("|");
+			}
+			System.out.println();
+		}
+		System.out.println("- - - - - - - - -\n");
+		
+		//exibindo o array
+		System.out.println("Matriz com um:\n");
+		for(int lin = 0; lin < linha ; lin++){
+			System.out.print("|");
+			for(int col = 0; col < coluna ; col++){
+				System.out.print(matrizum[col][lin].intValue());
+				System.out.print("|");
+			}
+			System.out.println();
+		}
+		System.out.println("- - - - - - - - -\n");
 		
 			
 			

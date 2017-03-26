@@ -12,7 +12,6 @@ public class Arquivo {
 	
 	public static String Read(String caminho){
 		String conteudo = "";
-		
 		try{
 			FileReader arq = new FileReader(caminho);
 			BufferedReader lerArq = new BufferedReader(arq);

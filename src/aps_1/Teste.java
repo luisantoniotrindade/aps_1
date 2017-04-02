@@ -22,9 +22,11 @@ public class Teste {
 		 * com uma string formada por 1 e 0.
 		 */
 		
+		
+		 //Declaração de variáveis
 		 File arquivo = new File("src/txt/example_3.txt");
-	        Scanner entrada = null;
-	        int coluna,linha;
+	     Scanner entrada = null;
+	     int coluna,linha;
 	       
 	        try
 	        {
@@ -32,17 +34,46 @@ public class Teste {
 	            entrada = new Scanner(new BufferedReader( new FileReader(arquivo.getPath())));
 	            coluna = entrada.nextInt();
 	            linha = entrada.nextInt();
+	            
+	            
 	           
 	            System.out.println("Qt. de Colunas: "+coluna);
 	   
 	            System.out.println("Qt. de Linhas: "+linha+"\n\n");
 	   
 	            Integer[][] matriz = new Integer[coluna][linha];
-	           
+	            
+	            //Loop para o armazenamento da matriz
+	            
+	            //Enquanto tem linhas...
 	            while(entrada.hasNext()==true){
-	            	System.out.println("teste"+entrada.nextLine());
+
+	            	for(int lin = 0; lin < linha;lin++){
+	            		//Quebrando a linha obtida em variáveis únicas para o armazenamento
+	            		String[] linhasoriginais = entrada.next().split("");
 	            	
+	            		for(int col = 0; col < coluna; col++){
+	    	            	//Teste para a exibição de linhas e colunas
+	            			//System.out.println("Coluna: "+col+"\nLinha: "+lin+"\n");
+	    	            	System.out.println(linhasoriginais[col]);
+	    	            	matriz[col][lin] = Integer.parseInt(linhasoriginais[col]);
+	            		}	
+	            	}
 	            }
+	            
+	            
+	            for(int lin = 0; lin < linha;lin++){
+	            	System.out.print("|");
+            		for(int col = 0; col < coluna; col++){
+            			System.out.print(matriz[col][lin].intValue());
+            			System.out.print("|");		
+            		}
+            		System.out.println();
+            	}
+	            System.out.println("- - - - - - - - - - - - - - - - - -\n");
+	            
+	            
+	            
 	        //fim do try
 	        }
 	       

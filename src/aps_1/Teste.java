@@ -22,7 +22,7 @@ public class Teste {
 		//Lendo o primeiro arquivo txt
 		
 		//Salvando o caminho do arquivo
-		String arq = "src/txt/example_4.txt";
+		String arq = "src/txt/example_2.txt";
 		
 		//Lendo o arquivo txt
 		String texto = Arquivo.Read(arq);
@@ -107,6 +107,8 @@ public class Teste {
 			System.out.println();
 		}
 		System.out.println("- - - - - - - - -\n");
+		
+		
 		
 		//exibindo o array
 		System.out.println("Matriz com um:\n");
